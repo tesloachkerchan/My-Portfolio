@@ -10,7 +10,7 @@ submit.addEventListener('submit', (e)=>{
     '<br/><h3>Message:<h3/>  ' +message+'<div/>';
 
     Email.send({
-    SecureToken : "#",
+    SecureToken : "#Home",
     To : 'tesloachkerchan@gmail.com',
     From : "tesloachkerchan@gmail.com",
     Subject : subject,

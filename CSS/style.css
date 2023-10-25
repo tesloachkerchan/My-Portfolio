@@ -328,7 +328,10 @@ h3.my-profession
 }
 .home .home-img img
 {
-    margin: auto;
+    margin-top: -20px;
+    margin-left: -30px;
+    margin-bottom: -20px;
+    margin-right: -30px;
     height: 400px;
     border-radius: 5px;
 }
