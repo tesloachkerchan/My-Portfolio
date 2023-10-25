@@ -1,21 +1,25 @@
-let submit = document.getElementById('contact-form');
 
-submit.addEventListener('submit', (e)=>{
-  e.preventDefault();
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let subject = document.getElementById('subject').value;
-    let message = document.getElementById('message').value;
-    let body = '<div style={border : 3px solid green ; padding : 10px; margin: 15px;  border-radius: 5px;}><h2>New Email from   '+ name + '<h2/>'+' <br/>name:  '+ name + '<br/>email:  '+ email +
-    '<br/><h3>Message:<h3/>  ' +message+'<div/>';
+function sendMail() {
+  var params = {
+     name : document.getElementById('name').value,
+     email : document.getElementById('email').value,
+     message : document.getElementById('message').value,
+     
 
-    Email.send({
-    SecureToken : "#Home",
-    To : 'tesloachkerchan@gmail.com',
-    From : "tesloachkerchan@gmail.com",
-    Subject : subject,
-    Body : body
-}).then(
-  message => alert("Messege sent Succesfully")
-);
-})
+  }
+  const serviceId = "service_dvurdt3";
+const templateId = "template_534qdnh";
+
+emailjs.send(serviceId, templateId, params)
+  .then(
+    res => {
+      name = document.getElementById('name').value = ""
+      email = document.getElementById('email').value = ""
+      message = document.getElementById('message').value = ""
+      console.log(res)
+      alert('your message send successfully!')
+   
+    }
+  ).catch(err => console.log(err));
+}
+
