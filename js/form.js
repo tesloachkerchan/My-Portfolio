@@ -16,7 +16,6 @@ emailjs.send(serviceId, templateId, params)
       name = document.getElementById('name').value = ""
       email = document.getElementById('email').value = ""
       message = document.getElementById('message').value = ""
-      console.log(res)
       alert('your message send successfully!')
    
     }
